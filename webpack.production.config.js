@@ -18,7 +18,7 @@ loaders.push({
 
 module.exports = {
 	entry: [
-		'./src/index.jsx'
+		'src/js/client.jsx'
 	],
 	output: {
 		path: path.join(__dirname, 'public'),
@@ -50,7 +50,7 @@ module.exports = {
 			allChunks: true
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/template.html',
+			template: './src/index.html',
 			title: 'Webpack App'
 		})
 	]

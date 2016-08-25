@@ -28,7 +28,7 @@ module.exports = {
 	entry: [
 		`webpack-dev-server/client?http://${HOST}:${PORT}`,
 		`webpack/hot/only-dev-server`,
-		`./src/index.jsx` // Your appʼs entry point
+		`./src/js/client.jsx` // Your appʼs entry point
 	],
 	devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
 	output: {
@@ -58,7 +58,7 @@ module.exports = {
 		new webpack.NoErrorsPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
-			template: './src/template.html'
+			template: './src/index.html'
 		})
 	]
 };
